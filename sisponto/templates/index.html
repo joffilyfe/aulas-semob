@@ -1,0 +1,32 @@
+<h1>Olá primeiro template</h1>
+
+<style>
+	table {
+		width: 100%;
+	}
+	
+	td {
+		border: 1px solid #ccc;
+	}
+</style>
+
+<table>
+	<thead>
+		<th>Dia</th>
+		<th>Assinatura</th>
+		<th>Entrada</th>
+		<th>Saída</th>
+	</thead>
+
+	<tbody>
+
+		{% for dia, informacao in calendario.items() %}
+			<tr>
+				<td>{{dia}}</td>
+				<td>{{informacao}}</td>
+				<td>08:00</td>
+				<td>14:00</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
