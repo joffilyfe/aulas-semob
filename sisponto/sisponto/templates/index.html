@@ -10,6 +10,13 @@
 	}
 </style>
 
+{% if funcionario %}
+	<p>Matrícula: {{funcionario.matricula}}</p>
+	<p>Nome: {{funcionario.nome}}</p>
+	<p>{{funcionario.setor}}</p>
+	<p>{{funcionario.cargo}}</p>
+{% endif %}
+
 <table>
 	<thead>
 		<th>Dia</th>
