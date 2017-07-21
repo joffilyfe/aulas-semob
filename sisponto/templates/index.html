@@ -1,4 +1,6 @@
-<h1>Olá primeiro template</h1>
+<h1>Prefeitura Municipal de João Pessoa</h1>
+<h2>Nome: {{funcionario.nome}}</h2>
+<h3>Mat: {{funcionario.matricula}}</h3>
 
 <style>
 	table {
@@ -19,13 +21,17 @@
 	</thead>
 
 	<tbody>
-
 		{% for dia, informacao in calendario.items() %}
 			<tr>
 				<td>{{dia}}</td>
 				<td>{{informacao}}</td>
-				<td>08:00</td>
-				<td>14:00</td>
+				{% if informacao %}
+					<td>----</td>
+					<td>----</td>
+				{% else %}
+					<td></td>
+					<td></td>
+				{% endif %}
 			</tr>
 		{% endfor %}
 	</tbody>
